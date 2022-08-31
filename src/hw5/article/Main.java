@@ -1,5 +1,8 @@
 package hw5.article;
 
+import jdbc.UserWork;
+import jdbc.WorkArticle;
+
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;

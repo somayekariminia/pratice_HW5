@@ -1,4 +1,6 @@
-package hw5.article;
+package jdbc;
+
+import hw5.article.Article;
 
 import java.sql.*;
 import java.util.ArrayList;

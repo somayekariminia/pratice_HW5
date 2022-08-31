@@ -1,4 +1,6 @@
-package hw5.article;
+package jdbc;
+
+import hw5.article.User;
 
 import java.sql.*;
 
@@ -15,7 +17,7 @@ public class UserWork {
         preparedStatement.executeUpdate();
     }
 
-    void register_user(User user) throws SQLException {
+    public void register_user(User user) throws SQLException {
         Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/maktab", "postgres", "12345");
         PreparedStatement preparedStatement = connection.prepareStatement(" INSERT INTO user_table VALUES (?,?,?,?,?) ");
 
@@ -27,7 +29,7 @@ public class UserWork {
         preparedStatement.executeUpdate();
     }
 
-    void change_password(int id, String password) throws SQLException {
+    public void change_password(int id, String password) throws SQLException {
         Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/maktab", "postgres", "12345");
         PreparedStatement preparedStatement = connection.prepareStatement("update user_table" + " set password=?" + " where id = ?");
         preparedStatement.setString(1, password);
